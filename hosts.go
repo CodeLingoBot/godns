@@ -40,8 +40,7 @@ func NewHosts(hs HostsSettings, rs RedisSettings) Hosts {
 
 }
 
-/*
-Match local /etc/hosts file first, remote redis records second
+/* Match local /etc/hosts file first, remote redis records second
 */
 func (h *Hosts) Get(domain string, family int) ([]net.IP, bool) {
 
